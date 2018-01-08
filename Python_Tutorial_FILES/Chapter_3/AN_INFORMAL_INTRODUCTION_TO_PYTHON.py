@@ -104,6 +104,78 @@ described in more detail here.
 """
 
 
+squares = [1, 2, 4, 9, 16, 25]
+print(squares)
+print(squares[0])
+print(squares[1])
+print(squares[2])
+print(squares[3])
+print(squares[4])
+print(squares[5])
+
+print(squares[-1])
+print(squares[-2])
+print(squares[-3])
+print(squares[-4])
+print(squares[-5])
+print(squares[-6])
+
+print(squares[:3])
+print(squares[3:])
+print(squares[:3] + squares[3:])
+
+print(squares[:-3])
+print(squares[-3:])
+print(squares[:-3] + squares[-3:])
+
+print(squares[:])
+print(squares + [36, 49, 64, 81, 100])
+
+cubes = [1, 8, 27, 65, 125]
+print(cubes)
+cubes[3] = 64
+print(cubes)
+
+cubes.append(216)
+cubes.append(7 **3)
+print(cubes)
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+print(letters)
+print(len(letters))
+letters[2:5] = ['C', 'D', 'E']
+print(letters)
+print(len(letters))
+letters[2:5] = []
+print(letters)
+print(len(letters))
+letters[:] = []
+print(letters)
+print(len(letters))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
