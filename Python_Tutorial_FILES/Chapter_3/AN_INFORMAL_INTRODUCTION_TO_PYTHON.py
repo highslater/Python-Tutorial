@@ -154,6 +154,34 @@ print(letters)
 print(len(letters))
 
 
+def fibonacci(topNUM):
+    # the sum of two elements defines the next up to topNUM
+    a, b = 0, 1
+    while b < topNUM:
+        print(b, end=',')
+        a, b = b, a + b
+
+def fibonacci2(num):
+    # the sum of two elements defines the next for num iterations
+    a, b = 0, 1
+    for i in range(num + 1):
+        print(b, end=',')
+        a, b = b, a + b
+        i += 1
+
+
+fibonacci(100)
+print()
+fibonacci2(11)
+
+
+
+
+
+
+
+
+
 
 
 
