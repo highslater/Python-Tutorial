@@ -110,6 +110,90 @@ l = "Mary had a little lamb"
 l = list(l.replace(" ", ""))
 print(l, len(l))
 
+print()
+
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, ' * ', n//x)
+            break
+    else:
+        print(n, 'is a prime number')
+
+print()
+
+for num in range(2, 10):
+    if num % 2 == 0:
+        print('found an even number', num)
+        continue
+    print('found a number', num)
+
+
+
+# while True:
+    # pass
+        # Process finished with exit code 0 is not seen when this is uncommented
+
+class MyEmptyClass:
+    pass
+
+def initlog(*args):
+    pass
+
+
+def fib(n):     # Write Fibonacci series up to n
+    """Print a Fibonacci series up to n."""
+    a, b = 0, 1
+    while a < n:
+        print(a, end = " ")
+        a, b = b, a + b
+    print()
+
+fib(2000)
+
+print(fib(0))
+
+f = fib
+
+f(2000)
+
+
+def fib2(n):     # Return Fibonacci series up to n
+    """Return a list containing the Fibonacci series up to n."""
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a + b
+    return result
+
+f100 = fib2(100)
+print(f100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
