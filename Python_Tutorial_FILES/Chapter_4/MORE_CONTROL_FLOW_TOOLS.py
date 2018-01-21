@@ -171,10 +171,66 @@ f100 = fib2(100)
 print(f100)
 
 
+def ask_ok(prompt, retries=4, reminder='Please try again'):
+    while True:
+        ok = input(prompt)
+        if ok in ('y', 'ye', 'yes'):
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise valueError('invalid user response')
+        print(reminder)
 
+# ask_ok('do you really want to quit ?')
 
+# ask_ok('OK to overwrite the file ?', 2)
 
+# ask_ok('OK to overwrite the file ?', 2, 'Only yes or no')
 
+i = 5
+
+def f(arg=i):
+    print(arg)
+
+i = 6
+f()
+
+def f(a, L=[]):
+    L.append(a)
+    return L
+
+print(f(1))
+print(f(2))
+print(f(3))
+print(f(4))
+print(f(5))
+
+print()
+print(f(75, [150]))
+print(f(37.5, [150]))
+
+L = []
+print(f(99))
+
+def f(a, L= None):
+    if L == None:
+        L = []
+
+    L.append(a)
+    return L
+
+print(f(1))
+print(f(2))
+print(f(3))
+print(f(4))
+print(f(5))
+
+print()
+print(f(75, [150]))
+print(f(37.5, [150]))
+print(f(99))
 
 
 
