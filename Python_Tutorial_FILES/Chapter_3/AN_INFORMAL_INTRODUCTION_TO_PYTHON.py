@@ -1,21 +1,29 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
+# AN_INFORMAL_INTRODUCTION_TO_PYTHON.py
+
+"""DOCstring for  AN_INFORMAL_INTRODUCTION_TO_PYTHON.py.
+
+2nd DOCstring line
+"""
+
+
 from platform import python_version
 from sys import hexversion
 
-print("The Python Version is:", python_version(), " #"+ str((hexversion)))
+print("The Python Version is:", python_version(), " #" + str((hexversion)))
 print("\nAN INFORMAL INTRODUCTION TO PYTHON\n")
 
 print("2 + 2 = \t\t\t", 2 + 2)
-print("50 - 5*6 = \t\t\t", 50 - 5*6)
-print("(50 - 5*6) / 4 = \t", ((50 - 5*6) / 4))
+print("50 - 5*6 = \t\t\t", 50 - 5 * 6)
+print("(50 - 5*6) / 4 = \t", ((50 - 5 * 6) / 4))
 print("8 /5 = \t\t\t\t", 8 / 5)
 print("17 / 3 = \t\t\t", 17 / 3)
-print("17 // 3 = \t\t\t", 17 // 3)
+print("17 // 3 = \t\t\t", 17 // 3, " # floor division")
 print("17 % 3 = \t\t\t", 17 % 3)
 print("5 * 3 + 2 = \t\t", 5 * 3 + 2)
-print("17 / 3 = \t\t\t", 17 //3, "with a remainder of ", 17 % 3)
+print("17 / 3 = \t\t\t", 17 // 3, "with a remainder of ", 17 % 3)
 
 print("5 squared = \t\t", 5 ** 2)
 print("2 to power 7 = \t\t", 2 ** 7)
@@ -23,14 +31,14 @@ print("2 to power 7 = \t\t", 2 ** 7)
 width = 20
 height = 5 * 9
 print("width x height = \t", width * height)
-print("4 x 3.75 - 1 = \t\t", 4 * 3.75 -1)
+print("4 x 3.75 - 1 = \t\t", 4 * 3.75 - 1)
 
 tax = 12.5 / 100
 price = 100.50
 print("The price is: \t\t", price)
 print("The tax rate is: \t", tax)
 print("The tax is: \t\t", price * tax)
-print("The total is: \t\t", round(price + price * tax,2))
+print("The total is: \t\t", round(price + price * tax, 2))
 
 print('\nspam eggs')
 print('doesn\'t')
@@ -52,6 +60,7 @@ Usage: thingy [OPTIONS]
 
 print("3 x um followed by ium ", 3 * "um" + "ium")
 print("Py" "thon")
+print("Py" "th" "on")
 
 prefix = "Py"
 print(prefix + "thon")
@@ -95,11 +104,12 @@ print(word[:2] + "py")
 
 """
 See also:
-textseq Strings are examples of sequence types, and support the common operations supported by such types.
-string-methods Strings support a large number of methods for basic transformations and searching.
-formatstrings Information about string formatting with str.format() .
-old-string-formatting The old formatting operations invoked when strings are the left operand of the % operator are
-described in more detail here.
+textseq Strings are examples of sequence types, and support the common
+operations supported by such types. string-methods Strings support a large
+number of methods for basic transformations and searching. formatstrings
+Information about string formatting with str.format() . old-string-formatting
+The old formatting operations invoked when strings are the left operand of the
+% operator are described in more detail here.
 
 """
 
@@ -137,7 +147,7 @@ cubes[3] = 64
 print(cubes)
 
 cubes.append(216)
-cubes.append(7 **3)
+cubes.append(7 ** 3)
 print(cubes)
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
@@ -154,15 +164,16 @@ print(letters)
 print(len(letters))
 
 
-def fibonacci(topNUM):
-    # the sum of two elements defines the next up to topNUM
+def fibonacci(top_num):
+    """The sum of two elements defines the next up to topNUM."""
     a, b = 0, 1
-    while b < topNUM:
+    while b < top_num:
         print(b, end=',')
         a, b = b, a + b
 
+
 def fibonacci2(num):
-    # the sum of two elements defines the next for num iterations
+    """The sum of two elements defines the next for num iterations."""
     a, b = 0, 1
     for i in range(num + 1):
         print(b, end=',')
@@ -173,58 +184,7 @@ def fibonacci2(num):
 fibonacci(100)
 print()
 fibonacci2(11)
+print()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+i = 256 * 256
+print("The value of i is", i)
