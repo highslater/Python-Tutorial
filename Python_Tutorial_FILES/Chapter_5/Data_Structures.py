@@ -289,3 +289,173 @@ vector = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flat = [num for elem in vector for num in elem]
 print(vector)
 print(flat)
+
+
+def flatten(v):
+    """Docstring."""
+    return [n for e in v for n in e]
+
+
+print(flatten(vector))
+
+pie = [str(round(pi, i)) for i in range(6)]
+print(pie)
+
+matrix3 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+matrix4 = [[row[i] for row in matrix3] for i in range(4)]
+matrix_Zip = list(zip(*matrix3))
+
+print(matrix3)
+print(matrix4)
+print(matrix_Zip)
+
+a = [-1, 1, 66.25, 333, 333, 1234.5]
+print(a)
+
+for i in range(6):
+    del a[0]
+    print(a)
+
+del a
+print('''
+print(a)
+        Traceback (most recent call last):
+        File "./Data_Structures.py", line 319, in <module>
+            print(a)
+        NameError: name 'a' is not defined
+        ''')
+t = (12345, 54321, 'Hello!')
+print(t)
+
+for i in range(len(t)):
+    print(t[i])
+
+u = t, (1, 2, 3, 4, 5)
+print(u)
+
+for i in range(len(u)):
+    print(u[i])
+
+print(flatten(u))
+
+v = ([1, 2, 3], [3, 2, 1])
+print(v)
+v[0][1] = 'two'
+v[1][1] = 'two'
+print(v)
+
+print('''
+v[0] = [1, 2, 3]
+                Traceback (most recent call last):
+                File "./Data_Structures.py", line 347, in <module>
+                    v[0] = [1, 2, 3]
+                TypeError: 'tuple' object does not support item assignment''')
+empty = ()
+singleton = ('hello',)
+print(len(empty))
+print(len(singleton))
+
+n1, n2, greeting = t
+print(n1)
+print(n2)
+print(greeting)
+
+s1 = set()
+s2 = {1, 2, 3, 3, 3}
+d1 = {}
+
+print(type(s1), s1)
+print(type(s2), s2)
+print(type(d1), d1)
+
+print(1 in s2)
+print(4 in s2)
+
+a = set('abracadabra')
+b = set('alacazam')
+
+print(a, b)
+print(a)
+print(b)
+print(a - b)
+print(b - a)
+print(a | b)
+print(b | a)
+print(a & b)
+print(b & a)
+print(a ^ b)
+print(b ^ a)
+
+a = {x for x in 'abracadabra' if x not in 'abc'}
+print(a)
+
+passwords = {
+    'facebook': "FaCeBoOk",
+    'twitter': "TwItTeR",
+    'reddit': "ReDdIt",
+    'tumblr': "TuMbLr"
+}
+
+print(passwords)
+print(passwords['facebook'])
+print(passwords['twitter'])
+print(passwords['reddit'])
+print(passwords['tumblr'])
+
+del passwords['tumblr']
+print(passwords)
+print(list(passwords.keys()))
+print(sorted(passwords.keys()))
+print('reddit' in passwords)
+print('tumblr' in passwords)
+print('reddit' not in passwords)
+print('tumblr' not in passwords)
+
+square = {x: x ** 2 for x in range(1, 11)}
+cube = {x: x ** 3 for x in range(1, 11)}
+
+print(square)
+print(cube)
+print(square[3])
+print(cube[3])
+
+simple = dict(a=1, b=2, c=3, d=4)
+print(simple)
+
+for k, v in passwords.items():
+    print(k, " = ", v, end="\n")
+
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+
+
+def substitution_encrypt(message):
+    """Docstring."""
+    mes = []
+    e = dict([(l, n) for l, n in zip(list(
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        'abcdefghijklmnopqrstuvwxyz/.!'),
+        [x for x in range(1, 56)])])
+
+    print("substitution_encrypt")
+    for m in message:
+        mes.append(e[m])
+    return mes
+
+
+def substitution_decrypt(ciphertext):
+    """Docstring."""
+    mes = []
+    d = dict([(n, l) for n, l in zip(
+        [x for x in range(1, 56)],
+        list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+             'abcdefghijklmnopqrstuvwxyz/.!'))])
+
+    print("substitution_decrypt")
+    for c in ciphertext:
+        mes.append(d[c])
+    return "".join(mes)
+
+
+print(substitution_encrypt('The/spy/who/came/in/from/the/cold'))
+print(substitution_decrypt([1, 38, 31, 29, 53, 12, 31, 27, 39, 27, 45]))
