@@ -22,15 +22,11 @@ logging.basicConfig(filename="LOG_files/LOG_06.Log",
 logger = logging.getLogger()
 logger.info("06_Chapter_6_Modules.py RUN / START")
 
-
 print("The Python Version is:", python_version(), " #" + str((hexversion)))
 print("\nModules\n")
-
 print("fibo.__name__ =", fibo.__name__)
-
 print("fibo.fib(100) =", fibo.fib(100))
 
 f = fibo.fib2(1000)
 print("f = ", f)
-
 print("fibo.result =", fibo.result)
