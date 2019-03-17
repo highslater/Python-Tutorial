@@ -12,6 +12,8 @@ from sys import hexversion
 from collections import deque
 from math import pi
 
+print("The Python Version is:", python_version(), " #" + str((hexversion)))
+print("\nData Structures\n")
 
 string = "string"
 integer = 1
@@ -23,10 +25,6 @@ set_ = set()
 integers = [0, 1, 2, 3, 0, 1, 0, 0, 1, 4]
 stack = [3, 4, 5]
 queue = [5, 4, 3, 2, 1, 0]
-
-
-print("The Python Version is:", python_version(), " #" + str((hexversion)))
-print("\nData Structures\n")
 
 
 def dir_list(s, x):
