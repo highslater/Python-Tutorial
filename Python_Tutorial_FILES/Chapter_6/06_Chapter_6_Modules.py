@@ -10,8 +10,8 @@
 import logging
 from platform import python_version
 from sys import hexversion
+import importlib
 import fibo
-
 
 LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s"
 
@@ -22,11 +22,18 @@ logging.basicConfig(filename="LOG_files/LOG_06.Log",
 logger = logging.getLogger()
 logger.info("06_Chapter_6_Modules.py RUN / START")
 
-print("The Python Version is:", python_version(), " #" + str((hexversion)))
-print("\nModules\n")
-print("fibo.__name__ =", fibo.__name__)
-print("fibo.fib(100) =", fibo.fib(100))
+print("\nThe Python Version is:", python_version(), " #" + str((hexversion)))
+print("Modules/06_Chapter_6_Modules.py")
+print("06_Chapter_6_Modules.py name =", __name__)
+print("fibo.py name =", fibo.__name__, "\n")
 
-f = fibo.fib2(1000)
+print("06_Chapter_6_Modules.py issued command 'importlib.reload(fibo)'")
+importlib.reload(fibo)
+
+print("", "*" * 90, "\n")
+print("", "fibo.fib(10000) =")
+fibo.fib(10000)
+print("\n", "*" * 90)
+
+f = fibo.fib2(100)
 print("f = ", f)
-print("fibo.result =", fibo.result)

@@ -21,10 +21,14 @@ logging.basicConfig(filename="LOG_files/LOG_fibo.Log",
 logger = logging.getLogger()
 logger.info("fibo.py RUN / START")
 
+# ====== Executable Statements ======
 
 print("The Python Version is:", python_version(), " #" + str((hexversion)))
-print("\nModules/fibo.py\n")
+print("Modules/fibo.py")
+print("fibo.py name =", __name__)
 
+
+# ====== Function Definitions ======
 
 def fib(n):
     """Write fibonacci series up to n."""
@@ -32,10 +36,11 @@ def fib(n):
     while b < n:
         print(b, end=', ')
         a, b = b, a + b
+    print()
 
 
 def fib2(n):
-    """Write fibonacci series up to n."""
+    """Return fibonacci series up to n."""
     result = []
     a, b = 0, 1
     while b < n:
@@ -43,4 +48,7 @@ def fib2(n):
         a, b = b, a + b
     return result
 
-result = fib2(100)
+
+if __name__ == "__main__":
+    import sys
+    fib(int(sys.argv[1]))
